@@ -7,6 +7,7 @@ import { RegexParamTypeProvider } from './param_types/regex';
 import { StringParamTypeProvider } from './param_types/string';
 import { JsonParamTypeProvider } from './param_types/json';
 import { BaseParamTypeProvider } from './param_types/base';
+import { ScriptingLangParamTypeProvider } from './param_types/script_lang';
 
 export function AggTypesAggParamsProvider(Private) {
   const paramTypeMap = {
@@ -15,6 +16,7 @@ export function AggTypesAggParamsProvider(Private) {
     regex: Private(RegexParamTypeProvider),
     string: Private(StringParamTypeProvider),
     json: Private(JsonParamTypeProvider),
+    script_lang: Private(ScriptingLangParamTypeProvider),
     _default: Private(BaseParamTypeProvider)
   };
 
